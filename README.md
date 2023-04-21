@@ -29,13 +29,13 @@ Install `music21`:
 ❯ pip3 install –upgrade music21
 ```
 
-Clone this project to your computer and change directory to `PianoFingering` folder, then:
+Clone this project to your computer and change directory to `PianoFingering.jl` folder, then:
 
 ``` shell
 ❯ julia
-❯ ]
-❯ activate .
-❯ instantiate .
+❯ using Pkg
+❯ Pkg.activate(".")
+❯ Pkg.instantiate()
 ```
 
 Now you have installed all the dependency. Close your terminal.
@@ -44,13 +44,12 @@ Now you have installed all the dependency. Close your terminal.
 
 1. Put your `.musicxml` file to `musicxml` folder, suppose we have an `example.musicxml` file right now.
 
-2. Change directory to `PianoFingering` folder:
+2. Change directory to `PianoFingering.jl` folder:
 
 ``` shell
 ❯ julia -t auto
-❯ ]
-❯ activate .
-❯ (Backspace)
+❯ using Pkg
+❯ Pkg.activate(".")
 ❯ using PianoFingering
 ❯ fingering("example")
 ```
