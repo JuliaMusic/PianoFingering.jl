@@ -55,3 +55,7 @@ Now you have installed all the dependency. Close your terminal.
 ```
 
 Wait for the program to complete, annotated piano score `example_output.musicxml` will be stored in `output` folder, this may take a few minutes.
+
+### Feedback
+
+If you encounter error, or musicxml file can't fingering correctly. Please open a issue and upload your musicxml file.
