@@ -8,7 +8,7 @@
   <identification>
     <creator type="composer">横山克</creator>
     <encoding>
-      <encoding-date>2023-04-21</encoding-date>
+      <encoding-date>2023-04-22</encoding-date>
       <software>music21 v.8.1.0</software>
       <software>MuseScore 3.6.2</software>
     </encoding>
@@ -46,11 +46,11 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
     <score-part id="P1">
       <part-name>Piano</part-name>
       <part-abbreviation>Pno.</part-abbreviation>
-      <score-instrument id="I0202e6e8440e6976a2b82108154e2a24">
+      <score-instrument id="Iad2dbe2389a4680f5241f9b6378c52a5">
         <instrument-name>Piano</instrument-name>
         <instrument-abbreviation>Pno</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="I0202e6e8440e6976a2b82108154e2a24">
+      <midi-instrument id="Iad2dbe2389a4680f5241f9b6378c52a5">
         <midi-channel>1</midi-channel>
         <midi-program>1</midi-program>
       </midi-instrument>
@@ -876,7 +876,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">begin</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">4</fingering>
+            <fingering alternate="no" substitution="no">3</fingering>
           </technical>
         </notations>
       </note>
@@ -893,7 +893,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">end</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
+            <fingering alternate="no" substitution="no">4</fingering>
           </technical>
         </notations>
       </note>
@@ -2282,7 +2282,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="2">forward hook</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
+            <fingering alternate="no" substitution="no">2</fingering>
           </technical>
         </notations>
       </note>
@@ -2299,7 +2299,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">4</fingering>
+            <fingering alternate="no" substitution="no">5</fingering>
           </technical>
         </notations>
       </note>

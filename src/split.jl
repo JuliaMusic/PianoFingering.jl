@@ -72,8 +72,10 @@ function split_notes(notes_by_position::Vector{Notes},hand::Hand)::Vector{Int}
 end
 
 function splited_range(notes_by_position::Vector{Notes},hand::Hand)::Vector{UnitRange{Int64}}
+    threads_num = Threads.nthreads()
     notes_length = length(notes_by_position)
-    split_length = ceil(notes_length / Sys.CPU_THREADS)
+    split_length = ceil(notes_length / threads_num)
+
     r = split_notes(notes_by_position,hand)
 
     println("range before splite:")
@@ -82,8 +84,8 @@ function splited_range(notes_by_position::Vector{Notes},hand::Hand)::Vector{Unit
     push!(r,notes_length)
     len_set = Set{Int}()
     
-    if length(r) - 1 <= Sys.CPU_THREADS
-        return [ (i:j) for (i,j) in partition(r,2,1)]
+    if length(r) - 1 <= threads_num
+        split_length = 5
     end
 
     range_vector = Vector{UnitRange{Int64}}()
@@ -107,35 +109,17 @@ function splited_range(notes_by_position::Vector{Notes},hand::Hand)::Vector{Unit
         end
         
         range_len = length(range_vector)
-        if range_len == Sys.CPU_THREADS || split_length in len_set || split_length <= 5
+        if range_len == threads_num || split_length in len_set || split_length <= 5
             break
         else
             empty!(range_vector)
             push!(len_set,split_length)
-            range_len < Sys.CPU_THREADS ? split_length -= 1 : split_length += 1
+            range_len < threads_num ? split_length -= 1 : split_length += 1
         end
     end  
 
     println("range after splite:")
     @show range_vector
     
-    return range_vector
-end
-
-function splited_range_slim(notes_by_position::Vector{Notes})::Vector{UnitRange{Int64}}
-    r = split_notes(notes_rh)
-    range_vector = Vector{UnitRange{Int64}}()
-    range_start = 1
-    split_length = 5
-    i = 2
-    while i <= length(r)
-        range_end = r[i]
-        if range_end - range_start < split_length
-            i+=1
-        else
-            push!(range_vector,range_start:range_end)
-            range_start = range_end
-        end
-    end
     return range_vector
 end
