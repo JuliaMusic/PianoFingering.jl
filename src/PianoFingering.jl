@@ -27,9 +27,9 @@ include("process.jl")
 export fingering
 
 const music21 = PyNULL()
-copy!(music21,pyimport("music21"))
+
 function __init__()
     copy!(music21,pyimport("music21"))
 end
-fingering("example")
+
 end
