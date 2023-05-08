@@ -8,9 +8,11 @@
   <identification>
     <creator type="composer">横山克</creator>
     <encoding>
-      <encoding-date>2023-04-22</encoding-date>
+      <encoding-date>2023-05-08</encoding-date>
       <software>music21 v.8.1.0</software>
-      <software>MuseScore 3.6.2</software>
+      <software>MuseScore 4.0.2</software>
+      <supports attribute="new-system" element="print" type="yes" value="yes" />
+      <supports attribute="new-page" element="print" type="yes" value="yes" />
     </encoding>
   </identification>
   <defaults>
@@ -35,7 +37,7 @@
     <credit-words default-x="600" default-y="1611.43" font-size="22" justify="center" valign="top">書店ガール (Simple Piano ver.)</credit-words>
   </credit>
   <credit page="1">
-    <credit-words default-x="600" default-y="1554.29" font-size="16" justify="center" valign="top">戦う!書店ガール OST</credit-words>
+    <credit-words default-x="600" default-y="1554.28" font-size="16" justify="center" valign="top">戦う!書店ガール OST</credit-words>
   </credit>
   <credit page="1">
     <credit-words default-x="1114.29" default-y="1472.47" justify="right" valign="bottom" xml:space="preserve">Composer: 横山克
@@ -46,11 +48,11 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
     <score-part id="P1">
       <part-name>Piano</part-name>
       <part-abbreviation>Pno.</part-abbreviation>
-      <score-instrument id="Iad2dbe2389a4680f5241f9b6378c52a5">
+      <score-instrument id="Ie423ef497da338a5f4c919cc24c7c12f">
         <instrument-name>Piano</instrument-name>
         <instrument-abbreviation>Pno</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="Iad2dbe2389a4680f5241f9b6378c52a5">
+      <midi-instrument id="Ie423ef497da338a5f4c919cc24c7c12f">
         <midi-channel>1</midi-channel>
         <midi-program>1</midi-program>
       </midi-instrument>
@@ -59,14 +61,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
   <!--=========================== Part 1 ===========================-->
   <part id="P1">
     <!--========================= Measure 1 ==========================-->
-    <measure number="1" width="241.38">
+    <measure number="1" width="248.75">
       <print>
         <system-layout>
           <system-margins>
-            <left-margin>63.9</left-margin>
+            <left-margin>50</left-margin>
             <right-margin>0</right-margin>
           </system-margins>
-          <top-system-distance>210.08</top-system-distance>
+          <top-system-distance>210.49</top-system-distance>
         </system-layout>
       </print>
       <attributes>
@@ -90,7 +92,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </attributes>
       <direction placement="above">
         <direction-type>
-          <rehearsal default-x="-20.6" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-x="-1.64" relative-y="19.55" valign="middle">A</rehearsal>
+          <rehearsal default-x="-20.6" default-y="0.4" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-x="-1.64" relative-y="19.55" valign="middle">A</rehearsal>
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -106,7 +108,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </direction>
       <direction placement="below">
         <direction-type>
-          <dynamics default-x="6.5" default-y="-41.69" relative-y="-25">
+          <dynamics default-x="5.2" default-y="-42.09" relative-y="-25">
             <mp />
           </dynamics>
         </direction-type>
@@ -147,7 +149,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="106.26" default-y="-45">
+      <note default-x="107.26" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -165,7 +167,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="121.75" default-y="-30">
+      <note default-x="124.44" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -182,7 +184,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="146.53" default-y="-45">
+      <note default-x="150.21" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -200,7 +202,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="162.02" default-y="-30">
+      <note default-x="167.4" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -217,7 +219,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="186.81" default-y="-45">
+      <note default-x="193.17" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -234,7 +236,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="211.59" default-y="-30">
+      <note default-x="218.95" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -254,7 +256,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="81.48" default-y="-100.02">
+      <note default-x="81.48" default-y="-101.35">
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -273,7 +275,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 2 ==========================-->
-    <measure number="2" width="207.4">
+    <measure number="2" width="201.76">
       <note default-x="13" default-y="-45">
         <pitch>
           <step>D</step>
@@ -291,7 +293,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="41.53" default-y="-45">
+      <note default-x="38.78" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -309,7 +311,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="59.37" default-y="-30">
+      <note default-x="55.96" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -326,7 +328,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="87.9" default-y="-45">
+      <note default-x="81.73" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -344,7 +346,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="105.73" default-y="-25">
+      <note default-x="103.23" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -362,7 +364,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="123.56" default-y="-20">
+      <note default-x="120.41" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -380,7 +382,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="141.4" default-y="-10">
+      <note default-x="137.6" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -398,7 +400,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="159.23" default-y="-20">
+      <note default-x="154.78" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -416,7 +418,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="177.06" default-y="-25">
+      <note default-x="171.96" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -436,7 +438,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="13" default-y="-100.02">
+      <note default-x="13" default-y="-101.35">
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -455,7 +457,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 3 ==========================-->
-    <measure number="3" width="172.9">
+    <measure number="3" width="180.26">
       <note default-x="13" default-y="-45">
         <pitch>
           <step>D</step>
@@ -490,7 +492,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="37.78" default-y="-45">
+      <note default-x="38.78" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -508,7 +510,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="53.27" default-y="-30">
+      <note default-x="55.96" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -525,7 +527,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="78.05" default-y="-45">
+      <note default-x="81.73" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -543,7 +545,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="93.54" default-y="-30">
+      <note default-x="98.92" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -560,7 +562,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="118.32" default-y="-45">
+      <note default-x="124.69" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -577,7 +579,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="143.11" default-y="-30">
+      <note default-x="150.47" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -597,7 +599,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="13" default-y="-100.02">
+      <note default-x="13" default-y="-101.35">
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -616,7 +618,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 4 ==========================-->
-    <measure number="4" width="207.4">
+    <measure number="4" width="201.76">
       <note default-x="13" default-y="-45">
         <pitch>
           <step>D</step>
@@ -634,7 +636,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="41.53" default-y="-45">
+      <note default-x="38.78" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -652,7 +654,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="59.37" default-y="-30">
+      <note default-x="55.96" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -669,7 +671,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="87.9" default-y="-45">
+      <note default-x="81.73" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -687,7 +689,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="105.73" default-y="-25">
+      <note default-x="103.23" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -705,7 +707,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="123.56" default-y="-20">
+      <note default-x="120.41" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -729,7 +731,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="141.4" default-y="-10">
+      <note default-x="137.6" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -747,7 +749,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="159.23" default-y="-20">
+      <note default-x="154.78" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -765,7 +767,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="177.06" default-y="-25">
+      <note default-x="171.96" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -785,7 +787,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="13" default-y="-100.02">
+      <note default-x="13" default-y="-101.35">
         <pitch>
           <step>G</step>
           <octave>3</octave>
@@ -804,7 +806,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 5 ==========================-->
-    <measure number="5" width="135.59">
+    <measure number="5" width="146.04">
       <note default-x="13" default-y="-30">
         <pitch>
           <step>G</step>
@@ -819,9 +821,6 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <staff>1</staff>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
         </notations>
       </note>
       <direction placement="below">
@@ -832,14 +831,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </direction>
       <direction placement="below">
         <direction-type>
-          <dynamics default-x="6.5" default-y="-53.24" relative-y="-25">
+          <dynamics default-x="2.76" default-y="-50.85" relative-y="-25">
             <p />
           </dynamics>
         </direction-type>
         <staff>1</staff>
         <sound dynamics="44" />
       </direction>
-      <note default-x="56.08" default-y="-30">
+      <note default-x="62.01" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -852,18 +851,21 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <staff>1</staff>
         <notations>
           <tied type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
         </notations>
       </note>
       <direction placement="below">
         <direction-type>
-          <dynamics default-x="3.25" default-y="-40" relative-y="-25">
+          <dynamics default-x="5.2" default-y="-40" relative-y="-25">
             <mp />
           </dynamics>
         </direction-type>
         <staff>1</staff>
         <sound dynamics="57" />
       </direction>
-      <note default-x="82.63" default-y="15">
+      <note default-x="90.47" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -876,11 +878,11 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">begin</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
+            <fingering alternate="no" substitution="no">4</fingering>
           </technical>
         </notations>
       </note>
-      <note default-x="104.71" default-y="20">
+      <note default-x="116.24" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -893,14 +895,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">end</beam>
         <notations>
           <technical>
-            <fingering alternate="no" substitution="no">4</fingering>
+            <fingering alternate="no" substitution="no">5</fingering>
           </technical>
         </notations>
       </note>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note>
+      <note default-x="65.62" default-y="-106.35">
         <rest measure="yes" />
         <duration>30240</duration>
         <voice>2</voice>
@@ -908,14 +910,23 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 6 ==========================-->
-    <measure number="6" width="294.63">
+    <measure number="6" width="247.3">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>0</left-margin>
+            <right-margin>0</right-margin>
+          </system-margins>
+          <system-distance>140.87</system-distance>
+        </system-layout>
+      </print>
       <direction placement="above">
         <direction-type>
-          <rehearsal default-x="-28.5" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-y="30" valign="middle">B</rehearsal>
+          <rehearsal default-x="-25" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-y="30" valign="middle">B</rehearsal>
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="63.89" default-y="-10">
+      <note default-x="60.4" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -932,7 +943,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="63.89" default-y="5">
+      <note default-x="60.4" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -949,7 +960,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="99.11" default-y="5">
+      <note default-x="85.27" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -967,7 +978,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="121.13" default-y="25">
+      <note default-x="105.27" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -984,7 +995,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="156.35" default-y="5">
+      <note default-x="130.14" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -1002,7 +1013,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="178.36" default-y="25">
+      <note default-x="150.13" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -1019,7 +1030,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="213.58" default-y="15">
+      <note default-x="175.01" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -1037,7 +1048,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="235.59" default-y="10">
+      <note default-x="197.5" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1055,7 +1066,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="257.61" default-y="5">
+      <note default-x="217.5" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -1080,8 +1091,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           <sign>G</sign>
           <line>2</line>
         </clef>
+        <staff-details print-object="yes" />
       </attributes>
-      <note default-x="63.89" default-y="-145.02">
+      <note default-x="60.4" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -1098,7 +1110,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="63.89" default-y="-125.02">
+      <note default-x="60.4" default-y="-126.35">
         <chord />
         <pitch>
           <step>G</step>
@@ -1118,8 +1130,8 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 7 ==========================-->
-    <measure number="7" width="225.96">
-      <note default-x="16.5" default-y="-10">
+    <measure number="7" width="187.28">
+      <note default-x="13" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -1136,7 +1148,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="10">
+      <note default-x="13" default-y="10">
         <chord />
         <pitch>
           <step>A</step>
@@ -1153,7 +1165,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="49.51" default-y="10">
+      <note default-x="37.87" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1171,7 +1183,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="71.5" default-y="25">
+      <note default-x="60.37" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -1188,7 +1200,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="104.51" default-y="10">
+      <note default-x="85.24" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1206,13 +1218,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="1" size="8" type="down" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <note default-x="125.14" default-y="-10">
+      <note default-x="107.74" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -1229,7 +1235,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="158.15" default-y="10">
+      <note default-x="132.61" default-y="45">
         <pitch>
           <step>A</step>
           <octave>6</octave>
@@ -1246,7 +1252,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="191.15" default-y="5">
+      <note default-x="157.48" default-y="40">
         <pitch>
           <step>G</step>
           <octave>6</octave>
@@ -1263,16 +1269,10 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="1" size="8" type="stop" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="16.5" default-y="-145.02">
+      <note default-x="13" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -1289,7 +1289,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="-120.02">
+      <note default-x="13" default-y="-121.35">
         <chord />
         <pitch>
           <step>A</step>
@@ -1309,8 +1309,8 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 8 ==========================-->
-    <measure number="8" width="289.92">
-      <note default-x="14.4" default-y="-10">
+    <measure number="8" width="218.54">
+      <note default-x="11.05" default-y="-10">
         <grace slash="yes" />
         <pitch>
           <step>D</step>
@@ -1323,12 +1323,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <staff>1</staff>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="46.24" default-y="-10">
+      <note default-x="34.38" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -1347,7 +1344,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="46.24" default-y="5">
+      <note default-x="34.38" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -1364,7 +1361,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="46.24" default-y="25">
+      <note default-x="34.38" default-y="25">
         <chord />
         <pitch>
           <step>D</step>
@@ -1381,7 +1378,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="84.94" default-y="10">
+      <note default-x="59.25" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1399,7 +1396,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="109.13" default-y="25">
+      <note default-x="81.74" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -1416,7 +1413,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="147.83" default-y="10">
+      <note default-x="106.62" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1434,7 +1431,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="172.02" default-y="5">
+      <note default-x="129.11" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -1451,7 +1448,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="172.02" default-y="25">
+      <note default-x="129.11" default-y="25">
         <chord />
         <pitch>
           <step>D</step>
@@ -1468,7 +1465,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="210.72" default-y="30">
+      <note default-x="153.98" default-y="30">
         <pitch>
           <step>E</step>
           <octave>6</octave>
@@ -1485,7 +1482,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="249.42" default-y="35">
+      <note default-x="188.74" default-y="35">
         <pitch>
           <step>F</step>
           <alter>1</alter>
@@ -1507,7 +1504,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="46.24" default-y="-145.02">
+      <note default-x="34.38" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -1524,7 +1521,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="46.24" default-y="-125.02">
+      <note default-x="34.38" default-y="-126.35">
         <chord />
         <pitch>
           <step>G</step>
@@ -1544,14 +1541,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 9 ==========================-->
-    <measure number="9" width="204.16">
+    <measure number="9" width="160.66">
       <direction placement="above">
         <direction-type>
-          <octave-shift number="2" size="8" type="down" />
+          <octave-shift number="1" size="8" type="down" />
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="24.6" default-y="-25">
+      <note default-x="18.06" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -1570,7 +1567,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="-10">
+      <note default-x="18.06" default-y="-10">
         <chord />
         <pitch>
           <step>D</step>
@@ -1589,7 +1586,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="10">
+      <note default-x="18.06" default-y="10">
         <chord />
         <pitch>
           <step>A</step>
@@ -1608,7 +1605,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="66.72" default-y="5">
+      <note default-x="49.59" default-y="5">
         <pitch>
           <step>G</step>
           <octave>6</octave>
@@ -1626,7 +1623,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="108.83" default-y="-15">
+      <note default-x="81.12" default-y="-15">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -1643,7 +1640,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="108.83" default-y="20">
+      <note default-x="81.12" default-y="20">
         <chord />
         <pitch>
           <step>C</step>
@@ -1660,7 +1657,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="140.01" default-y="-20">
+      <note default-x="105.99" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -1677,7 +1674,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="140.01" default-y="15">
+      <note default-x="105.99" default-y="15">
         <chord />
         <pitch>
           <step>B</step>
@@ -1694,7 +1691,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="171.18" default-y="-30">
+      <note default-x="130.86" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -1711,11 +1708,882 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="171.18" default-y="5">
+      <note default-x="130.86" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
           <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <direction placement="above">
+        <direction-type>
+          <octave-shift number="1" size="8" type="stop" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <backup>
+        <duration>30240</duration>
+      </backup>
+      <note default-x="18.06" default-y="-146.35">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="18.06" default-y="-121.35">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--========================= Measure 10 =========================-->
+    <measure number="10" width="214.8">
+      <note default-x="27.9" default-y="-10">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="27.9" default-y="10">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="27.9" default-y="25">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="52.77" default-y="5">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="72.77" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="97.64" default-y="5">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="117.64" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="142.51" default-y="15">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="165.01" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="185" default-y="5">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <backup>
+        <duration>30240</duration>
+      </backup>
+      <note default-x="27.9" default-y="-146.35">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="27.9" default-y="-126.35">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--========================= Measure 11 =========================-->
+    <measure number="11" width="235.94">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>0</left-margin>
+            <right-margin>0</right-margin>
+          </system-margins>
+          <system-distance>140.87</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="60.4" default-y="-10">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="60.4" default-y="10">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="85.58" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="108.08" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="133.27" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155.77" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180.95" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180.95" default-y="45">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="206.14" default-y="5">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="206.14" default-y="40">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <backup>
+        <duration>30240</duration>
+      </backup>
+      <attributes>
+        <staff-details print-object="yes" />
+      </attributes>
+      <note default-x="60.4" default-y="-146.35">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="60.4" default-y="-121.35">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--========================= Measure 12 =========================-->
+    <measure number="12" width="218.2">
+      <note default-x="11.05" default-y="-10">
+        <grace slash="yes" />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="33.09" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="33.09" default-y="25">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="58.28" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">forward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="80.78" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="105.97" default-y="10">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>2520</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="128.46" default-y="25">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="153.65" default-y="30">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="188.41" default-y="35">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <backup>
+        <duration>30240</duration>
+      </backup>
+      <note default-x="33.09" default-y="-146.35">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="33.09" default-y="-126.35">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <stem>up</stem>
+        <staff>2</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--========================= Measure 13 =========================-->
+    <measure number="13" width="162.09">
+      <direction placement="above">
+        <direction-type>
+          <octave-shift number="2" size="8" type="down" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note default-x="18.06" default-y="-25">
+        <pitch>
+          <step>A</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>7560</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="18.06" default-y="-10">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>7560</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="18.06" default-y="10">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>7560</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <arpeggiate />
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="49.99" default-y="-30">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>7560</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="49.99" default-y="5">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>7560</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <dot />
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="81.92" default-y="-15">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="107.11" default-y="-20">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="107.11" default-y="15">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="132.29" default-y="-15">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="132.29" default-y="20">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
         </pitch>
         <duration>5040</duration>
         <voice>1</voice>
@@ -1737,878 +2605,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="24.6" default-y="-145.02">
-        <pitch>
-          <step>C</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="24.6" default-y="-120.02">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-    </measure>
-    <!--========================= Measure 10 =========================-->
-    <measure number="10" width="309.19">
-      <note default-x="73.74" default-y="-10">
-        <pitch>
-          <step>D</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="73.74" default-y="10">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="73.74" default-y="25">
-        <chord />
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="109.68" default-y="5">
-        <pitch>
-          <step>G</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <beam number="2">forward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="132.15" default-y="25">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="168.1" default-y="5">
-        <pitch>
-          <step>G</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <beam number="2">backward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="190.57" default-y="25">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="226.51" default-y="15">
-        <pitch>
-          <step>B</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <beam number="2">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">4</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="248.98" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <beam number="2">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="271.45" default-y="5">
-        <pitch>
-          <step>G</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <backup>
-        <duration>30240</duration>
-      </backup>
-      <note default-x="73.74" default-y="-145.02">
-        <pitch>
-          <step>C</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="73.74" default-y="-125.02">
-        <chord />
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-    </measure>
-    <!--========================= Measure 11 =========================-->
-    <measure number="11" width="226.66">
-      <note default-x="16.5" default-y="-10">
-        <pitch>
-          <step>D</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="16.5" default-y="10">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="49.63" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <beam number="2">forward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="71.63" default-y="25">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="104.76" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <beam number="2">backward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="3" size="8" type="down" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <note default-x="125.47" default-y="-10">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="158.6" default-y="-25">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="158.6" default-y="10">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="191.73" default-y="-30">
-        <pitch>
-          <step>G</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="191.73" default-y="5">
-        <chord />
-        <pitch>
-          <step>G</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="3" size="8" type="stop" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <backup>
-        <duration>30240</duration>
-      </backup>
-      <note default-x="16.5" default-y="-145.02">
-        <pitch>
-          <step>C</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="16.5" default-y="-120.02">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-    </measure>
-    <!--========================= Measure 12 =========================-->
-    <measure number="12" width="277.98">
-      <note default-x="14.4" default-y="-10">
-        <grace slash="yes" />
-        <pitch>
-          <step>D</step>
-          <octave>5</octave>
-        </pitch>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>up</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="33.59" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="33.59" default-y="25">
-        <chord />
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="72.4" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <beam number="2">forward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="96.66" default-y="25">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="135.48" default-y="10">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>2520</duration>
-        <voice>1</voice>
-        <type>16th</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <beam number="2">backward hook</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="159.73" default-y="25">
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="198.55" default-y="30">
-        <pitch>
-          <step>E</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">3</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="237.36" default-y="35">
-        <pitch>
-          <step>F</step>
-          <alter>1</alter>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <accidental>sharp</accidental>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">4</fingering>
-          </technical>
-        </notations>
-      </note>
-      <backup>
-        <duration>30240</duration>
-      </backup>
-      <note default-x="33.59" default-y="-145.02">
-        <pitch>
-          <step>C</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="33.59" default-y="-125.02">
-        <chord />
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-        </pitch>
-        <duration>30240</duration>
-        <voice>2</voice>
-        <type>half</type>
-        <dot />
-        <stem>up</stem>
-        <staff>2</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-    </measure>
-    <!--========================= Measure 13 =========================-->
-    <measure number="13" width="200.84">
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="4" size="8" type="down" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <note default-x="24.6" default-y="-25">
-        <pitch>
-          <step>A</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>7560</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <dot />
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="24.6" default-y="-10">
-        <chord />
-        <pitch>
-          <step>D</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>7560</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <dot />
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="24.6" default-y="10">
-        <chord />
-        <pitch>
-          <step>A</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>7560</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <dot />
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <arpeggiate />
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="65.93" default-y="-30">
-        <pitch>
-          <step>G</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>7560</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <dot />
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="65.93" default-y="5">
-        <chord />
-        <pitch>
-          <step>G</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>7560</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <dot />
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="107.26" default-y="-15">
-        <pitch>
-          <step>C</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">begin</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="137.85" default-y="-20">
-        <pitch>
-          <step>B</step>
-          <octave>5</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">continue</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="137.85" default-y="15">
-        <chord />
-        <pitch>
-          <step>B</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="168.44" default-y="-15">
-        <pitch>
-          <step>C</step>
-          <octave>6</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <beam number="1">end</beam>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
-        </notations>
-      </note>
-      <note default-x="168.44" default-y="20">
-        <chord />
-        <pitch>
-          <step>C</step>
-          <octave>7</octave>
-        </pitch>
-        <duration>5040</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <notations>
-          <technical>
-            <fingering alternate="no" substitution="no">5</fingering>
-          </technical>
-        </notations>
-      </note>
-      <direction placement="above">
-        <direction-type>
-          <octave-shift number="4" size="8" type="stop" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <backup>
-        <duration>30240</duration>
-      </backup>
-      <note default-x="24.6" default-y="-145.02">
+      <note default-x="18.06" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -2627,14 +2624,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 14 =========================-->
-    <measure number="14" width="312.34">
+    <measure number="14" width="210.59">
       <direction placement="above">
         <direction-type>
-          <rehearsal default-x="-28.5" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-y="30" valign="middle">C</rehearsal>
+          <rehearsal default-x="-13" default-y="28.9" enclosure="none" font-size="14" font-weight="bold" halign="center" relative-y="30" valign="middle">C</rehearsal>
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="63.89" default-y="-10">
+      <note default-x="13" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -2651,7 +2648,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="63.89" default-y="5">
+      <note default-x="13" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -2668,7 +2665,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="100.43" default-y="15">
+      <note default-x="38.19" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -2686,7 +2683,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="123.27" default-y="20">
+      <note default-x="60.68" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -2704,7 +2701,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="146.11" default-y="25">
+      <note default-x="83.18" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -2721,7 +2718,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="182.65" default-y="-10">
+      <note default-x="108.37" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -2738,7 +2735,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="182.65" default-y="5">
+      <note default-x="108.37" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -2755,7 +2752,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="228.33" default-y="15">
+      <note default-x="135.8" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -2773,7 +2770,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="251.16" default-y="20">
+      <note default-x="158.3" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -2791,7 +2788,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="274" default-y="25">
+      <note default-x="180.8" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -2811,7 +2808,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="63.89" default-y="-150.02">
+      <note default-x="13" default-y="-151.35">
         <pitch>
           <step>B</step>
           <octave>3</octave>
@@ -2828,7 +2825,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="63.89" default-y="-125.02">
+      <note default-x="13" default-y="-126.35">
         <chord />
         <pitch>
           <step>G</step>
@@ -2846,7 +2843,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="182.65" default-y="-145.02">
+      <note default-x="108.37" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -2865,7 +2862,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="205.49" default-y="-125.02">
+      <note default-x="125.16" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -2880,12 +2877,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="274" default-y="-125.02">
+      <note default-x="180.8" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -2900,12 +2894,15 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <notations>
           <tied type="stop" />
           <slur number="1" type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
         </notations>
       </note>
     </measure>
     <!--========================= Measure 15 =========================-->
-    <measure number="15" width="256.95">
-      <note default-x="24.6" default-y="-10">
+    <measure number="15" width="201.74">
+      <note default-x="18.06" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -2923,7 +2920,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="10">
+      <note default-x="18.06" default-y="10">
         <chord />
         <pitch>
           <step>A</step>
@@ -2941,7 +2938,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="25">
+      <note default-x="18.06" default-y="25">
         <chord />
         <pitch>
           <step>D</step>
@@ -2959,7 +2956,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="67.16" default-y="15">
+      <note default-x="45.49" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -2977,7 +2974,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="89.16" default-y="10">
+      <note default-x="67.99" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -2995,7 +2992,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="110.44" default-y="5">
+      <note default-x="87.99" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -3013,7 +3010,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="131.72" default-y="-10">
+      <note default-x="104.78" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3031,7 +3028,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="153" default-y="5">
+      <note default-x="121.57" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -3048,7 +3045,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="187.05" default-y="10">
+      <note default-x="146.76" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -3065,7 +3062,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="221.1" default-y="15">
+      <note default-x="171.95" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -3085,7 +3082,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="24.6" default-y="-140.02">
+      <note default-x="18.06" default-y="-141.35">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -3104,7 +3101,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="45.88" default-y="-120.02">
+      <note default-x="34.85" default-y="-121.35">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -3119,12 +3116,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="110.44" default-y="-120.02">
+      <note default-x="87.99" default-y="-121.35">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -3139,9 +3133,12 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <notations>
           <tied type="stop" />
           <slur number="2" type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
         </notations>
       </note>
-      <note default-x="153" default-y="-140.02">
+      <note default-x="121.57" default-y="-141.35">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -3158,7 +3155,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="164.9" default-y="-135.02">
+      <note default-x="133.47" default-y="-136.35">
         <chord />
         <pitch>
           <step>E</step>
@@ -3176,7 +3173,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="153" default-y="-115.02">
+      <note default-x="121.57" default-y="-116.35">
         <chord />
         <pitch>
           <step>B</step>
@@ -3196,8 +3193,17 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 16 =========================-->
-    <measure number="16" width="240.8">
-      <note default-x="16.5" default-y="-10">
+    <measure number="16" width="243.02">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>0</left-margin>
+            <right-margin>0</right-margin>
+          </system-margins>
+          <system-distance>140.87</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="60.4" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3214,7 +3220,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="57.07" default-y="15">
+      <note default-x="88.51" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -3232,7 +3238,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="79.07" default-y="20">
+      <note default-x="111" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -3250,7 +3256,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="101.06" default-y="25">
+      <note default-x="133.5" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -3269,11 +3275,11 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
       <direction placement="above">
         <direction-type>
-          <octave-shift number="5" size="8" type="down" />
+          <octave-shift number="3" size="8" type="down" />
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="133.52" default-y="-45">
+      <note default-x="159.31" default-y="-45">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3290,7 +3296,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="133.52" default-y="-30">
+      <note default-x="159.31" default-y="-30">
         <chord />
         <pitch>
           <step>G</step>
@@ -3307,7 +3313,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="174.09" default-y="-50">
+      <note default-x="187.41" default-y="-50">
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -3324,7 +3330,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="174.09" default-y="-25">
+      <note default-x="187.41" default-y="-25">
         <chord />
         <pitch>
           <step>A</step>
@@ -3341,7 +3347,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="206.54" default-y="-30">
+      <note default-x="213.22" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -3358,7 +3364,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="206.54" default-y="5">
+      <note default-x="213.22" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -3378,7 +3384,10 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="16.5" default-y="-150.02">
+      <attributes>
+        <staff-details print-object="yes" />
+      </attributes>
+      <note default-x="60.4" default-y="-151.35">
         <pitch>
           <step>B</step>
           <octave>3</octave>
@@ -3397,7 +3406,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="-120.02">
+      <note default-x="60.4" default-y="-121.35">
         <chord />
         <pitch>
           <step>A</step>
@@ -3414,7 +3423,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="36.78" default-y="-125.02">
+      <note default-x="77.6" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -3429,12 +3438,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="101.06" default-y="-125.02">
+      <note default-x="133.5" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -3449,9 +3455,12 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <notations>
           <tied type="stop" />
           <slur number="3" type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
         </notations>
       </note>
-      <note default-x="133.52" default-y="-145.02">
+      <note default-x="159.31" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -3470,7 +3479,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="153.8" default-y="-125.02">
+      <note default-x="176.51" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -3485,12 +3494,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">1</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="206.54" default-y="-125.02">
+      <note default-x="213.22" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -3505,12 +3511,15 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <notations>
           <tied type="stop" />
           <slur number="4" type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">1</fingering>
+          </technical>
         </notations>
       </note>
     </measure>
     <!--========================= Measure 17 =========================-->
-    <measure number="17" width="204.58">
-      <note default-x="16.5" default-y="-25">
+    <measure number="17" width="175.5">
+      <note default-x="13" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -3528,7 +3537,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="10">
+      <note default-x="13" default-y="10">
         <chord />
         <pitch>
           <step>A</step>
@@ -3546,7 +3555,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="73.81" default-y="-20">
+      <note default-x="61.38" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -3564,7 +3573,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="111.08" default-y="-15">
+      <note default-x="94.09" default-y="-15">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -3581,7 +3590,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="141.65" default-y="15">
+      <note default-x="119.9" default-y="15">
         <pitch>
           <step>B</step>
           <octave>6</octave>
@@ -3598,7 +3607,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="172.21" default-y="5">
+      <note default-x="145.7" default-y="5">
         <pitch>
           <step>G</step>
           <octave>6</octave>
@@ -3617,14 +3626,14 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
       <direction placement="above">
         <direction-type>
-          <octave-shift number="5" size="8" type="stop" />
+          <octave-shift number="3" size="8" type="stop" />
         </direction-type>
         <staff>1</staff>
       </direction>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="16.5" default-y="-140.02">
+      <note default-x="13" default-y="-141.35">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -3643,7 +3652,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="35.6" default-y="-120.02">
+      <note default-x="30.2" default-y="-121.35">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -3661,7 +3670,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="54.71" default-y="-105.02">
+      <note default-x="51.7" default-y="-106.35">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3678,7 +3687,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="111.08" default-y="-135.02">
+      <note default-x="94.09" default-y="-136.35">
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -3695,7 +3704,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="111.08" default-y="-110.02">
+      <note default-x="94.09" default-y="-111.35">
         <chord />
         <pitch>
           <step>C</step>
@@ -3715,8 +3724,8 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 18 =========================-->
-    <measure number="18" width="321.52">
-      <note default-x="63.89" default-y="-10">
+    <measure number="18" width="235.99">
+      <note default-x="13" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3733,7 +3742,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="63.89" default-y="5">
+      <note default-x="13" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -3750,7 +3759,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="109.58" default-y="5">
+      <note default-x="51.7" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -3768,7 +3777,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="109.58" default-y="15">
+      <note default-x="51.7" default-y="15">
         <chord />
         <pitch>
           <step>B</step>
@@ -3785,7 +3794,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="132.42" default-y="20">
+      <note default-x="74.2" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -3803,7 +3812,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="155.26" default-y="25">
+      <note default-x="96.69" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -3820,7 +3829,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="191.81" default-y="-10">
+      <note default-x="122.5" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -3837,7 +3846,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="191.81" default-y="5">
+      <note default-x="122.5" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -3854,7 +3863,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="237.49" default-y="5">
+      <note default-x="161.2" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -3872,7 +3881,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="237.49" default-y="15">
+      <note default-x="161.2" default-y="15">
         <chord />
         <pitch>
           <step>B</step>
@@ -3889,7 +3898,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="260.33" default-y="20">
+      <note default-x="183.7" default-y="20">
         <pitch>
           <step>C</step>
           <octave>6</octave>
@@ -3907,7 +3916,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="283.17" default-y="25">
+      <note default-x="206.2" default-y="25">
         <pitch>
           <step>D</step>
           <octave>6</octave>
@@ -3927,7 +3936,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="63.89" default-y="-150.02">
+      <note default-x="13" default-y="-151.35">
         <pitch>
           <step>B</step>
           <octave>3</octave>
@@ -3946,7 +3955,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="86.74" default-y="-125.02">
+      <note default-x="30.2" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -3964,7 +3973,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="109.58" default-y="-115.02">
+      <note default-x="51.7" default-y="-116.35">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -3981,7 +3990,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="191.81" default-y="-145.02">
+      <note default-x="122.5" default-y="-146.35">
         <pitch>
           <step>C</step>
           <octave>4</octave>
@@ -4000,7 +4009,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="214.65" default-y="-125.02">
+      <note default-x="139.71" default-y="-126.35">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -4018,7 +4027,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="237.49" default-y="-110.02">
+      <note default-x="161.2" default-y="-111.35">
         <pitch>
           <step>C</step>
           <octave>5</octave>
@@ -4037,8 +4046,8 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 19 =========================-->
-    <measure number="19" width="279.81">
-      <note default-x="24.6" default-y="-10">
+    <measure number="19" width="226.06">
+      <note default-x="18.06" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4056,7 +4065,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="10">
+      <note default-x="18.06" default-y="10">
         <chord />
         <pitch>
           <step>A</step>
@@ -4074,7 +4083,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="25">
+      <note default-x="18.06" default-y="25">
         <chord />
         <pitch>
           <step>D</step>
@@ -4092,7 +4101,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="69.01" default-y="15">
+      <note default-x="56.76" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -4110,7 +4119,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="91.22" default-y="10">
+      <note default-x="79.26" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -4128,7 +4137,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="113.43" default-y="5">
+      <note default-x="99.25" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -4146,7 +4155,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="135.64" default-y="-10">
+      <note default-x="116.46" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4164,7 +4173,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="157.84" default-y="-10">
+      <note default-x="133.66" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4181,7 +4190,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="157.84" default-y="5">
+      <note default-x="133.66" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -4198,7 +4207,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="206.94" default-y="10">
+      <note default-x="170.46" default-y="10">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -4215,7 +4224,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="242.47" default-y="15">
+      <note default-x="196.27" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -4235,7 +4244,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="24.6" default-y="-140.02">
+      <note default-x="18.06" default-y="-141.35">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -4254,7 +4263,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="46.81" default-y="-120.02">
+      <note default-x="35.26" default-y="-121.35">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -4272,7 +4281,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="69.01" default-y="-105.02">
+      <note default-x="56.76" default-y="-106.35">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4289,7 +4298,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="157.84" default-y="-140.02">
+      <note default-x="133.66" default-y="-141.35">
         <pitch>
           <step>D</step>
           <octave>4</octave>
@@ -4308,7 +4317,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="169.74" default-y="-135.02">
+      <note default-x="145.56" default-y="-136.35">
         <chord />
         <pitch>
           <step>E</step>
@@ -4325,7 +4334,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="184.74" default-y="-115.02">
+      <note default-x="159.56" default-y="-116.35">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -4340,12 +4349,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <beam number="1">continue</beam>
         <notations>
           <tied type="start" />
-          <technical>
-            <fingering alternate="no" substitution="no">2</fingering>
-          </technical>
         </notations>
       </note>
-      <note default-x="242.47" default-y="-115.02">
+      <note default-x="196.27" default-y="-116.35">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -4360,14 +4366,17 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         <notations>
           <tied type="stop" />
           <slur number="3" type="stop" />
+          <technical>
+            <fingering alternate="no" substitution="no">2</fingering>
+          </technical>
         </notations>
       </note>
     </measure>
     <!--========================= Measure 20 =========================-->
-    <measure number="20" width="165.27">
+    <measure number="20" width="147.99">
       <direction placement="above">
         <direction-type>
-          <words default-y="32.72" enclosure="none" font-size="12" font-weight="bold" relative-y="20">rit.</words>
+          <words default-y="34.33" enclosure="none" font-size="12" font-weight="bold" relative-y="20">rit.</words>
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -4377,7 +4386,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
         </direction-type>
         <staff>1</staff>
       </direction>
-      <note default-x="24.6" default-y="-10">
+      <note default-x="18.06" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4396,7 +4405,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="5">
+      <note default-x="18.06" default-y="5">
         <chord />
         <pitch>
           <step>G</step>
@@ -4415,7 +4424,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="20">
+      <note default-x="18.06" default-y="20">
         <chord />
         <pitch>
           <step>C</step>
@@ -4434,7 +4443,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="57.01" default-y="15">
+      <note default-x="50.77" default-y="15">
         <pitch>
           <step>B</step>
           <octave>5</octave>
@@ -4452,7 +4461,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="89.41" default-y="5">
+      <note default-x="83.49" default-y="5">
         <pitch>
           <step>G</step>
           <octave>5</octave>
@@ -4470,7 +4479,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="121.82" default-y="-10">
+      <note default-x="116.2" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>
@@ -4497,7 +4506,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="24.6" default-y="-130.02">
+      <note default-x="18.06" default-y="-131.35">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -4514,7 +4523,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="24.6" default-y="-110.02">
+      <note default-x="18.06" default-y="-111.35">
         <chord />
         <pitch>
           <step>C</step>
@@ -4534,17 +4543,26 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 21 =========================-->
-    <measure number="21" width="134.3">
+    <measure number="21" width="133.54">
+      <print new-system="yes">
+        <system-layout>
+          <system-margins>
+            <left-margin>0</left-margin>
+            <right-margin>816.3</right-margin>
+          </system-margins>
+          <system-distance>140.87</system-distance>
+        </system-layout>
+      </print>
       <direction placement="below">
         <direction-type>
-          <dynamics default-x="6.5" default-y="-40" relative-y="-25">
+          <dynamics default-x="2.76" default-y="-40" relative-y="-25">
             <p />
           </dynamics>
         </direction-type>
         <staff>1</staff>
         <sound dynamics="44" />
       </direction>
-      <note default-x="16.5" default-y="-30">
+      <note default-x="61.36" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -4561,7 +4579,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="28.4" default-y="-25">
+      <note default-x="73.26" default-y="-25">
         <chord />
         <pitch>
           <step>A</step>
@@ -4579,7 +4597,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="74.5" default-y="-20">
+      <note default-x="101.75" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -4604,8 +4622,9 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           <sign>F</sign>
           <line>4</line>
         </clef>
+        <staff-details print-object="yes" />
       </attributes>
-      <note default-x="16.5" default-y="-105.02">
+      <note default-x="61.36" default-y="-106.35">
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -4622,7 +4641,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="-85.02">
+      <note default-x="61.36" default-y="-86.35">
         <chord />
         <pitch>
           <step>C</step>
@@ -4642,8 +4661,8 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       </note>
     </measure>
     <!--========================= Measure 22 =========================-->
-    <measure number="22" width="113.77">
-      <note default-x="28.4" default-y="-30">
+    <measure number="22" width="78.73">
+      <note default-x="24.9" default-y="-30">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -4664,7 +4683,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
       <backup>
         <duration>30240</duration>
       </backup>
-      <note default-x="28.4" default-y="-105.02">
+      <note default-x="24.9" default-y="-106.35">
         <pitch>
           <step>F</step>
           <octave>3</octave>
@@ -4681,7 +4700,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="16.5" default-y="-85.02">
+      <note default-x="13" default-y="-86.35">
         <chord />
         <pitch>
           <step>C</step>
@@ -4699,7 +4718,7 @@ Piano Transcription: Odysee@QAQPiano</credit-words>
           </technical>
         </notations>
       </note>
-      <note default-x="28.4" default-y="-80.02">
+      <note default-x="24.9" default-y="-81.35">
         <chord />
         <pitch>
           <step>D</step>

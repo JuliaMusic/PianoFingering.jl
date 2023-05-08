@@ -54,5 +54,15 @@ function parse_MIDI(file_name::String, hand::Hand)::Vector{Notes}
         end
     end
     push!(notes_by_position, temp_notes)
+
+    # c=1
+    # for i in notes_by_position
+    #     for n in i
+    #         @show n
+    #     end
+    #     println("at $(c)---------")
+    #     c+=1
+    # end
+    
     return notes_by_position
 end

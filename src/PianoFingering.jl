@@ -12,8 +12,6 @@ using DataStructures
 using IterTools
 using Random
 using Parameters
-using BenchmarkTools
-using SharedArrays
 using Base.Threads
 
 include("const.jl")
@@ -29,9 +27,9 @@ include("process.jl")
 export fingering
 
 const music21 = PyNULL()
-
+copy!(music21,pyimport("music21"))
 function __init__()
     copy!(music21,pyimport("music21"))
 end
-
+fingering("example")
 end

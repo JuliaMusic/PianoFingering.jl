@@ -12,21 +12,21 @@ THIS PACKAGE ONLY TESTED ON LINUX.
 
 > Prompt: You can copy all following commands start with ❯ 
 
-Install Python (>3.10) and Julia (>1.8). 
+Install Python (>3.11) and Julia (>1.8). 
 
 Make sure:
 
 ``` shell
 ❯ python -V
-Python 3.10.10
+Python 3.11.3
 ❯ julia -v
-julia version 1.8.0
+julia version 1.8.5
 ```
 
 Install `music21`:
 
 ``` shell
-❯ pip3 install –upgrade music21
+❯ pip3 install music21
 ```
 
 Clone this project to your computer and change directory to `PianoFingering.jl` folder, then:

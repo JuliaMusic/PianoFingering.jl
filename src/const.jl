@@ -32,6 +32,13 @@ function Base.show(io::IO, nfp::NoteFingerPair)
     nn = rpad(pitch_to_name(nfp.first.pitch), 3)
     print(io,"Pair: $(nn) => $(nfp.second)")
 end
+function Base.show(io::IO, fingering::Fingering)
+    print(io,"$Fingering  ")
+    for nfp in fingering
+        nn = rpad(pitch_to_name(nfp.first.pitch), 3)
+        print(io,"$(nn) => $(nfp.second) ")
+    end
+end
 
 # midi note number of white keys
 white_keys = [21, 23, 24, 26, 28, 29, 31, 33, 35, 36, 38, 40, 41, 43, 45, 47, 48, 50, 52, 53, 55, 57, 59, 60, 62, 

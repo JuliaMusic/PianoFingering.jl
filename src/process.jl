@@ -37,41 +37,58 @@ function run_splite(notes::Vector{Notes},hand::Hand)::Vector{Fingering}
         end
         println("reward:$(reward[i])")
     end
+    
     return result_fingering
 end
 
 function annotation(part,fgs::Vector{Fingering})
-    i = 1
-    last_note = music21.note.Note()
-    for el in part.flat.getElementsByClass("GeneralNote")
-        now_fingering = fgs[i]
-        # acciaccatura, tie start
-        if el.isNote && el.duration.isGrace && (!isnothing(el.tie) && el.tie.type == "start")
-            el.articulations = PyVector([music21.articulations.Fingering(Int(now_fingering[Note(el.pitch.midi,0)]))])
-            last_note = el
-            continue
-        end
-
-        # acciaccatura, no tie
-        if el.isNote && el.duration.isGrace && (isnothing(el.tie))
-            grace_note = Note(el.pitch.midi,0)
-            el.articulations = PyVector([music21.articulations.Fingering(Int(now_fingering[grace_note]))])
-            delete!(now_fingering,grace_note) 
-            last_note = el
-            continue
-        end
-
-        # continue is element is not chord, note or grace_note. Skip this element
-        if !(el.isNote || el.isChord) || 
-            (!isnothing(el.tie) && (el.tie.type == "stop" || el.tie.type == "continue") && !last_note.duration.isGrace)
+    el_dict = SortedDict()
+    # try to pick up all the sounding note and chord
+    for el in part.flat.notes
+        if el.isChord
+            sounding_chord = false
+            for n in el.notes
+                has_tie = !isnothing(n.tie)
+                # chord has sounding note(no tie), or has start tie. So it's sounding chord
+                if !has_tie || (has_tie && n.tie.type == "start")
+                    sounding_chord = true
+                    break
+                end
+            end
+            if !sounding_chord
                 continue
+            end
+        end
+        
+        if el.isNote  
+            if !isnothing(el.tie) && ((el.tie.type == "start") || isnothing(el.tie))
+                continue
+            end
         end
 
-        # annotation chord or note
-        el.articulations = PyVector([music21.articulations.Fingering(Int(fg)) 
-            for fg in fingers(now_fingering)])
-        last_note = el
-        i += 1
+        offset = el.offset
+        if haskey(el_dict,offset)
+            push!(el_dict[offset],el)
+        else
+            el_dict[offset] = PyVector([el])
+        end
+    end
+    
+    if length(el_dict) != length(fgs)
+        error("number of fingering and note not equal.")
+    end
+
+    #start annotation
+    for (els_pair,fin) in zip(el_dict,fgs)
+        for el in els_pair.second
+            if el.isNote
+                el.articulations = PyVector([music21.articulations.Fingering(Int(fin[Note(el.pitch.midi,0)]))]) 
+            end
+            if el.isChord
+                el.articulations = PyVector([music21.articulations.Fingering(
+                    Int(fin[Note(n.pitch.midi,0)])) for n in el.notes])
+            end
+        end
     end
 end
 
@@ -86,14 +103,13 @@ function fingering(file_name::String)
 
     println("right hand start:")
     rh_result = run_splite(notes_rh,rh)
+    rh_part = score_with_fingering.parts[1]
+    annotation(rh_part,rh_result)
+
     println("left hand start:")
     lh_result = run_splite(notes_lh,lh)
-
     lh_part = score_with_fingering.parts[0]
-    rh_part = score_with_fingering.parts[1]
-
     annotation(lh_part,lh_result)
-    annotation(rh_part,rh_result)
 
     score_with_fingering.write("musicxml", "output/$(file_name)_output.musicxml")
 end
