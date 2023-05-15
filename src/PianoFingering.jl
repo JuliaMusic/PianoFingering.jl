@@ -15,6 +15,7 @@ using Parameters
 using Base.Threads
 
 include("const.jl")
+include("pig.jl")
 include("ActEpsGreedy.jl")
 include("DictPolicy.jl")
 include("midi_extract.jl")

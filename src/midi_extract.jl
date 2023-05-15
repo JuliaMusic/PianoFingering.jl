@@ -29,7 +29,7 @@ function generate_MIDI(piano_score,file_name)
     end
 end
 
-function parse_MIDI(file_name::String, hand::Hand)::Vector{Notes}
+function midi_loader(file_name::String, hand::Hand)::Vector{Notes}
     # get right hand notes 
     midi = readMIDIFile("midi/$(file_name)_$(hand).mid")
     piano_track = midi.tracks[2]
@@ -65,4 +65,10 @@ function parse_MIDI(file_name::String, hand::Hand)::Vector{Notes}
     # end
     
     return notes_by_position
+end
+
+function musicxml_loader(file_name::String)
+    piano_score = music21.converter.parse("musicxml/$(file_name).musicxml")
+    generate_MIDI(piano_score,file_name)
+    return midi_loader(file_name, rh),midi_loader(file_name, lh),piano_score
 end

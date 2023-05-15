@@ -89,35 +89,38 @@ function splited_range(notes_by_position::Vector{Notes},hand::Hand)::Vector{Unit
     end
 
     range_vector = Vector{UnitRange{Int64}}()
-    while true
-        range_start = 1
-        i = 2
-        for (i,e) in enumerate(r[2:end])
-            if e - range_start < split_length
-                continue
-            else
-                push!(range_vector,range_start:e)
-                range_start = e
+    if threads_num == 1
+        push!(range_vector,1:notes_length)
+    else
+        while true
+            range_start = 1
+            i = 2
+            for (i,e) in enumerate(r[2:end])
+                if length(range_start:e) < split_length
+                    continue
+                else
+                    push!(range_vector,range_start:e)
+                    range_start = e
+                end
             end
-        end
-        
-        # put last element of e to range_vector
-        last_range = last(range_vector)
-        if last(last_range) != notes_length
-            new_last_range = first(last_range) : notes_length
-            range_vector[length(range_vector)] = new_last_range
-        end
-        
-        range_len = length(range_vector)
-        if range_len == threads_num || split_length in len_set || split_length <= 5
-            break
-        else
-            empty!(range_vector)
-            push!(len_set,split_length)
-            range_len < threads_num ? split_length -= 1 : split_length += 1
-        end
-    end  
-
+            
+            # put last element of e to range_vector
+            last_range = last(range_vector)
+            if last(last_range) != notes_length
+                new_last_range = first(last_range) : notes_length
+                range_vector[length(range_vector)] = new_last_range
+            end
+            
+            range_len = length(range_vector)
+            if range_len == threads_num || split_length in len_set || split_length <= 5
+                break
+            else
+                empty!(range_vector)
+                push!(len_set,split_length)
+                range_len < threads_num ? split_length -= 1 : split_length += 1
+            end
+        end  
+    end
     println("range after splite:")
     @show range_vector
     

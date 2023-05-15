@@ -28,7 +28,7 @@ function actionvalues(p::DictPolicy, s) ::Dict
     available_actions = actions(p.mdp,s)
     action_dict = Dict()
     for a in available_actions
-        action_dict[a] = haskey(p.value_dict,(s,a)) ? p.value_dict[(s,a)] : 0
+        action_dict[a] = get(p.value_dict,(s,a),0) 
     end
     return action_dict
 end

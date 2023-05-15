@@ -24,19 +24,19 @@ function run_splite(notes::Vector{Notes},hand::Hand)::Vector{Fingering}
         sim = StepSimulator("s,a,r,sp")
         start_i = first(r)
         for (s,a,r,sp) in simulate(sim, mdp, policy)
-            result_fingering[start_i] = a
+            result_fingering[start_i] = copy(a)
             reward[start_i] = r
             start_i += 1
         end
     end
 
-    for (i,f) in enumerate(result_fingering)
-        println("-----------$(i):--------------------------")
-        for j in f
-            println("$(pitch_to_name(j.first.pitch)) : $(j.second)")
-        end
-        println("reward:$(reward[i])")
-    end
+    # for (i,f) in enumerate(result_fingering)
+    #     println("-----------$(i):--------------------------")
+    #     for j in f
+    #         println("$(pitch_to_name(j.first.pitch)) : $(j.second)")
+    #     end
+    #     println("reward:$(reward[i])")
+    # end
     
     return result_fingering
 end
@@ -46,6 +46,13 @@ function annotation(part,fgs::Vector{Fingering})
     # try to pick up all the sounding note and chord
     for el in part.flat.notes
         if el.isChord
+            # skip chord symbol
+            py_hasattr = pybuiltin("hasattr")
+            if py_hasattr(el,"figure")
+                continue
+            end
+
+            # add this chord?
             sounding_chord = false
             for n in el.notes
                 has_tie = !isnothing(n.tie)
@@ -61,7 +68,7 @@ function annotation(part,fgs::Vector{Fingering})
         end
         
         if el.isNote  
-            if !isnothing(el.tie) && ((el.tie.type == "start") || isnothing(el.tie))
+            if !isnothing(el.tie) && (!(el.tie.type == "start") || isnothing(el.tie))
                 continue
             end
         end
@@ -93,23 +100,31 @@ function annotation(part,fgs::Vector{Fingering})
 end
 
 function fingering(file_name::String)
-    piano_score = music21.converter.parse("musicxml/$(file_name).musicxml")
-    score_with_fingering = piano_score
+    file, extension = split(file_name,".")
+    file_name = String(file)
+    extension = String(extension)
 
-    generate_MIDI(piano_score,file_name)
-
-    notes_rh = parse_MIDI(file_name, rh)
-    notes_lh = parse_MIDI(file_name, lh)
+    notes_rh,notes_lh = Notes[],Notes[]
+    piano_score = nothing
+    if extension == "musicxml"
+        notes_rh,notes_lh,piano_score = musicxml_loader(file_name)
+    elseif extension == "txt"
+        notes_rh,notes_lh = pig_loader(file_name)
+    end
 
     println("right hand start:")
     rh_result = run_splite(notes_rh,rh)
-    rh_part = score_with_fingering.parts[1]
-    annotation(rh_part,rh_result)
-
     println("left hand start:")
     lh_result = run_splite(notes_lh,lh)
-    lh_part = score_with_fingering.parts[0]
-    annotation(lh_part,lh_result)
-
-    score_with_fingering.write("musicxml", "output/$(file_name)_output.musicxml")
+    
+    if extension == "musicxml"
+        # score_with_fingering = music21.converter.parse("musicxml/$(file_name).musicxml")
+        rh_part = piano_score.parts[1]
+        annotation(rh_part,rh_result)
+        lh_part = piano_score.parts[0]
+        annotation(lh_part,lh_result)
+        piano_score.write("musicxml", "output/$(file_name)_output.musicxml")
+    elseif extension == "txt"
+        pig_write(file_name,rh_result,lh_result)
+    end
 end
