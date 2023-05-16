@@ -31,12 +31,12 @@ end
 
 function midi_loader(file_name::String, hand::Hand)::Vector{Notes}
     # get right hand notes 
-    midi = readMIDIFile("midi/$(file_name)_$(hand).mid")
+    midi = load("midi/$(file_name)_$(hand).mid")
     piano_track = midi.tracks[2]
 
     notes = getnotes(piano_track)
     notes_by_position = Notes[]
-    temp_notes = Notes()
+    temp_notes = Notes(Note[])
     temp_set = Set{UInt8}()
     temp_position = notes[1].position
 
