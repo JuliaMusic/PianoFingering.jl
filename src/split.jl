@@ -31,8 +31,8 @@ function split_notes(notes_by_position::Vector{Notes},hand::Hand)::Vector{Int}
             left = i - offset
             right = i + offset
             if left >= 1 && right <= len
-                union!(s, notes_by_position[left].notes)
-                union!(s, notes_by_position[right].notes)
+                union!(s, notes_by_position[left])
+                union!(s, notes_by_position[right])
                 if max_notes[i] < max_notes[left] || max_notes[i] < max_notes[right]
                     is_max = false
                     break
