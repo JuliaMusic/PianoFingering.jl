@@ -1,5 +1,5 @@
-using MIDI:Notes
-
+import MIDI.Note
+const Notes = MIDI.Notes{MIDI.Note}
 @enum Hand lh=-1 rh=1
 @enum Finger f1=1 f2=2 f3=3 f4=4 f5=5
 @enum Direct up=1 down=-1 level=0
