@@ -99,6 +99,18 @@ function annotation(part,fgs::Vector{Fingering})
     end
 end
 
+function xml_to_pig(file_name::String)
+    file, extension = split(file_name,".")
+    file_name = String(file)
+    extension = String(extension)
+    notes_rh,notes_lh,piano_score = musicxml_loader(file_name)
+    println("right hand start:")
+    rh_result = run_splite(notes_rh,rh)
+    println("left hand start:")
+    lh_result = run_splite(notes_lh,lh)
+    xml_result_to_pig(file_name, rh_result, lh_result)
+end
+
 function fingering(file_name::String)
     file, extension = split(file_name,".")
     file_name = String(file)

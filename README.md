@@ -68,6 +68,13 @@ If you want to fingering a PIG format `.txt` file, just put `.txt` in `pig` fold
 ❯ fingering("pig_example.txt")
 ```
 
+### Musicxml to PIG
+
+Fingering a `.musicxml` file to PIG format:
+``` shell
+❯ xml_to_pig("example.musicxml")
+```
+
 ### Feedback
 
 If you encounter error, or musicxml file can't fingering correctly. Please open a issue and upload your musicxml file.

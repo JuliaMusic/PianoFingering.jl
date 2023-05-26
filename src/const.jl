@@ -270,7 +270,7 @@ function get_1to1_fingering(hand::Hand, start_fingering::Fingering,next_note::No
     r = Fingering[]
 
     if direct == level
-        push!(r, start_fingering)
+        push!(r, Fingering(next_note=>start_finger))
         return r
     end
         # calculate all available fingering, no crossing

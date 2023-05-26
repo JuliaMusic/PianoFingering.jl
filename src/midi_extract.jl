@@ -29,6 +29,7 @@ function generate_MIDI(piano_score,file_name)
     end
 end
 
+# load midi file, and return all the notes sorted by position
 function midi_loader(file_name::String, hand::Hand)::Vector{Notes}
     # get right hand notes 
     midi = load("midi/$(file_name)_$(hand).mid")
@@ -70,5 +71,6 @@ end
 function musicxml_loader(file_name::String)
     piano_score = music21.converter.parse("musicxml/$(file_name).musicxml")
     generate_MIDI(piano_score,file_name)
+    global midi_ms_per_tick = ms_per_tick(load("midi/$(file_name)_rh.mid"))
     return midi_loader(file_name, rh),midi_loader(file_name, lh),piano_score
 end

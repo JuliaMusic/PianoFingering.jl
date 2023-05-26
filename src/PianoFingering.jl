@@ -26,6 +26,7 @@ include("split.jl")
 include("process.jl")
 
 export fingering
+export xml_to_pig
 
 const music21 = PyNULL()
 

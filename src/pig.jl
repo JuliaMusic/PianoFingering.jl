@@ -79,6 +79,9 @@ function pig_to_notes_by_time(pig_notes::Vector{PigNote})::Vector{Notes}
         push!(temp_vec,n)
         temp_time = n.onset_time
     end
+
+    duration16th = pig_notes[2].onset_time - pig_notes[1].onset_time
+
     push!(pigs_by_time,copy(temp_vec))
 
     for n in pigs_by_time
@@ -95,7 +98,7 @@ function pig_to_notes_by_time(pig_notes::Vector{PigNote})::Vector{Notes}
                 name_to_pitch(pn.spelled_pitch), 
                 pn.onset_velocity, 
                 position, 
-                round(Int,256 * (pn.offset_time - pn.onset_time) / sixteenth_time), 
+                round(Int,256 * duration16th / sixteenth_time), 
                 pn.channel)
         end
         Notes(notes_vec)
@@ -148,6 +151,62 @@ function pig_write(file_name::String,rh_fingerings::Vector{Fingering},lh_fingeri
             pig_str*fin_str
         end
 
+        for s in str_vec
+            write(file,"$(s)\n")
+        end
+    end
+end
+
+# NoteFingerPair to pig line string with fingering, but no pig note id at string start
+function nfp_to_string(nfp::NoteFingerPair,hand::Hand)::String
+    note = nfp.first
+    finger = nfp.second
+    channel = hand == rh ? 0 : 1
+    # time count by ms
+    onset_time = midi_ms_per_tick * Int(note.position) / 1000
+    offset_time = midi_ms_per_tick * (note.position + note.duration*0.98) / 1000
+    return "$(onset_time)\t$(offset_time)\t$(pitch_to_name(note.pitch))\t$(note.velocity)\t0\t$(channel)\t$(Int(hand)*Int(finger))"
+end    
+
+function xml_result_to_pig(file_name::String,rh_fingerings::Vector{Fingering},lh_fingerings::Vector{Fingering})
+    open("output/$(file_name)_output.txt","w") do file
+        write(file,"//Version:\n")
+        # latest pos
+        pos = 0
+        count = 0
+        str_vec = String[]
+        rh_pointer = 1
+        lh_pointer = 1
+        rh_now_fingering = rh_fingerings[rh_pointer]
+        lh_now_fingering = lh_fingerings[lh_pointer]
+        rh_pos = first(rh_now_fingering).first.position
+        lh_pos = first(lh_now_fingering).first.position
+        length_rh = length(rh_fingerings)
+        length_lh = length(lh_fingerings)
+        
+        while !(rh_pointer == length_rh && lh_pointer == length_lh)
+            if rh_pos <= lh_pos
+                for nfp in rh_now_fingering
+                    push!(str_vec,"$(count)\t$(nfp_to_string(nfp,rh))")
+                    count += 1
+                end
+                if rh_pointer < length_rh
+                    rh_pointer += 1
+                    rh_now_fingering = rh_fingerings[rh_pointer]
+                    rh_pos = first(rh_now_fingering).first.position
+                end
+            else
+                for nfp in lh_now_fingering
+                    push!(str_vec,"$(count)\t$(nfp_to_string(nfp,lh))")
+                    count += 1
+                end
+                if lh_pointer < length_lh
+                    lh_pointer += 1
+                    lh_now_fingering = lh_fingerings[lh_pointer]
+                    lh_pos = first(lh_now_fingering).first.position
+                end
+            end
+        end
         for s in str_vec
             write(file,"$(s)\n")
         end
