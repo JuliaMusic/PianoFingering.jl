@@ -18,7 +18,7 @@ function run_splite(notes::Vector{Notes},hand::Hand)::Vector{Fingering}
         mdp = piano_mdp(notes[r],hand,part)
         exppolicy = ActEpsGreedyPolicy(mdp, 0.8)
         solver = DynaSolver(exploration_policy = exppolicy, learning_rate=0.99, n_episodes=10000, θ = 3, n_eval_traj = length(notes[r]))
-        # solver = QLearningSolver(exploration_policy = exppolicy, learning_rate=0.99, n_episodes=10000, n_eval_traj = length(notes_rh[r]))
+        # solver = QLearningSolver(exploration_policy = exppolicy, learning_rate=0.99, n_episodes=10000, n_eval_traj = length(notes[r]))
         policy = solve(solver, mdp)
         println("end: part:$(index) length:$(length(notes[r]))")
         sim = StepSimulator("s,a,r,sp")
@@ -33,7 +33,7 @@ function run_splite(notes::Vector{Notes},hand::Hand)::Vector{Fingering}
     # for (i,f) in enumerate(result_fingering)
     #     println("-----------$(i):--------------------------")
     #     for j in f
-    #         println("$(pitch_to_name(j.first.pitch)) : $(j.second)")
+    #         print("$(pitch_to_name(j.first.pitch)) : $(j.second) ")
     #     end
     #     println("reward:$(reward[i])")
     # end
@@ -111,6 +111,175 @@ function xml_to_pig(file_name::String)
     xml_result_to_pig(file_name, rh_result, lh_result)
 end
 
+function match_rate(dataset_dir::String,test_dir::String)
+    pig_file_vector = readdir(dataset_dir)
+    rl_file_vector = readdir(test_dir)
+    all = 0
+    not_match = 0
+    for (pig_file_name,rl_file_name) in zip(pig_file_vector,rl_file_vector)
+        dataset_pignotes = pig_to_pignotes("$(dataset_dir)/$(pig_file_name)")
+        test_pignotes = pig_to_pignotes("$(test_dir)/$(rl_file_name)")
+        for (dn,tn) in zip(dataset_pignotes,test_pignotes)
+            all+=1
+            if dn.finger_number != tn.finger_number
+                not_match+=1
+            end
+        end
+    end
+    @show not_match
+    @show all
+    @show not_match/all
+end
+
+function step_spread(dataset_dir::String)
+    c = 0
+    ss = 0.0
+    pig_file_vector = readdir(dataset_dir)
+    for f in pig_file_vector
+        rh_pig_notes,lh_pig_notes = parse_pig("$(dataset_dir)/$(f)")
+        fg_rh = pig_to_fingering_by_time(rh_pig_notes)
+        fg_lh = pig_to_fingering_by_time(lh_pig_notes)
+        for fg in (fg_rh,fg_lh)
+            hand = rh
+            if length(fg) == length(fg_lh)
+                hand = lh
+            end
+            for (fingering1,fingering2) in partition(fg,2,1)
+                if length(fingering1) == 1 && length(fingering2) == 1
+                    nfp1 = first(fingering1)
+                    nfp2 = first(fingering2)
+                    if chord_range(fingering1,fingering2) <= 7 && nfp1.second!= nfp2.second
+                        ss += key_distance(nfp1.first,nfp2.first)/abs((Int(nfp1.second)-Int(nfp2.second)))
+                        c += 1
+                    end
+                end
+            end
+        end
+    end
+    @show ss
+    @show c
+    @show ss/c
+end
+
+function hop(dataset_dir::String)
+    c = 0
+    pig_file_vector = readdir(dataset_dir)
+    for f in pig_file_vector
+        rh_pig_notes,lh_pig_notes = parse_pig("$(dataset_dir)/$(f)")
+        fg_rh = pig_to_fingering_by_time(rh_pig_notes)
+        fg_lh = pig_to_fingering_by_time(lh_pig_notes)
+        for fg in (fg_rh,fg_lh)
+            for (fingering1,fingering2) in partition(fg,2,1)
+                if length(fingering1) == 1 && length(fingering2) == 1
+                    nfp1 = first(fingering1)
+                    nfp2 = first(fingering2)
+                    if nfp1.second == nfp2.second && nfp1.first.pitch != nfp2.first.pitch && chord_range(fingering1,fingering2) <= 7
+                        if (Int(nfp1.second) - Int(nfp2.second))*(Int(nfp1.first.pitch) - Int(nfp2.first.pitch)) < 0
+                            c+=1
+                        end
+                    end
+                end
+            end
+        end
+    end
+    @show c
+end
+
+function thumbless_cross(dataset_dir::String)
+    cr = 0
+    cl = 0
+    pig_file_vector = readdir(dataset_dir)
+    for f in pig_file_vector
+        rh_pig_notes,lh_pig_notes = parse_pig("$(dataset_dir)/$(f)")
+        fg_rh = pig_to_fingering_by_time(rh_pig_notes)
+        fg_lh = pig_to_fingering_by_time(lh_pig_notes)
+        for (fingering1,fingering2) in partition(fg_rh,2,1)
+            if length(fingering1) == 1 && length(fingering2) == 1
+                nfp1 = first(fingering1)
+                nfp2 = first(fingering2)
+                if nfp1.second in [f2,f3,f4,f5] && nfp2.second in [f2,f3,f4,f5]
+                    if chord_range(fingering1,fingering2) <= 7
+                        if (Int(nfp1.second) - Int(nfp2.second))*(Int(nfp1.first.pitch) - Int(nfp2.first.pitch)) < 0
+                            # @show f
+                            # @show fingering1
+                            # @show fingering2
+                            # @show (Int(nfp1.second) - Int(nfp2.second))*(Int(nfp1.first.pitch) - Int(nfp2.first.pitch))
+                            # println("-----")
+                            cr+=1
+                        end
+                    end
+                end
+            end
+        end
+        for (fingering1,fingering2) in partition(fg_lh,2,1)
+            if length(fingering1) == 1 && length(fingering2) == 1
+                nfp1 = first(fingering1)
+                nfp2 = first(fingering2)
+                if nfp1.second in [f2,f3,f4,f5] && nfp2.second in [f2,f3,f4,f5]
+                    if chord_range(fingering1,fingering2) <= 7
+                        if (Int(nfp1.second) - Int(nfp2.second))*(Int(nfp1.first.pitch) - Int(nfp2.first.pitch)) > 0
+                            # @show f
+                            # @show fingering1
+                            # @show fingering2
+                            # @show (Int(nfp1.second) - Int(nfp2.second))*(Int(nfp1.first.pitch) - Int(nfp2.first.pitch))
+                            # println("-----")
+                            cr+=1
+                        end
+                    end
+                end
+            end
+        end
+    end
+    @show cr+cl
+end
+
+function cross_chord_checker(dir::String)
+    c=0
+    file_vector = readdir(dir)
+    for file_name in file_vector
+        rh_pig_notes,lh_pig_notes = parse_pig("$(dir)/$(file_name)")
+        fg_rh = pig_to_fingering_by_time(rh_pig_notes)
+        fg_lh = pig_to_fingering_by_time(lh_pig_notes)
+        
+        for f in fg_rh 
+            if length(f) >1
+                finger_number = Int[]
+                for nfp in f
+                    push!(finger_number,Int(nfp.second))
+                end
+                # @show finger_number
+                for i in partition(finger_number,2,1)
+                    if i[2] <= i[1]
+                        print("rh:$(file_name) ")
+                        @show f
+                        c+=1
+                        break
+                    end
+                end
+            end
+        end
+        
+        for f in fg_lh 
+            if length(f) >1
+                finger_number = Int[]
+                for nfp in f
+                    push!(finger_number,Int(nfp.second))
+                end
+                # @show finger_number
+                for i in partition(finger_number,2,1)
+                    if i[2] >= i[1]
+                        print("lh:$(file_name) ")
+                        @show f
+                        c+=1
+                        break
+                    end
+                end
+            end
+        end
+    end
+    @show c
+end
+
 function fingering(file_name::String)
     file, extension = split(file_name,".")
     file_name = String(file)
@@ -121,7 +290,8 @@ function fingering(file_name::String)
     if extension == "musicxml"
         notes_rh,notes_lh,piano_score = musicxml_loader(file_name)
     elseif extension == "txt"
-        notes_rh,notes_lh = pig_loader(file_name)
+        file_path = "pig/$(file_name).txt"
+        notes_rh,notes_lh = pig_loader(file_path)
     end
 
     println("right hand start:")

@@ -1,6 +1,7 @@
 import MIDI.Note
 const Notes = MIDI.Notes{MIDI.Note}
 MIDI.Notes{MIDI.Note}(v::Vector{MIDI.Note}) = MIDI.Notes(v)
+MIDI.Notes{MIDI.Note}() = MIDI.Notes()
 
 @enum Hand lh=-1 rh=1
 @enum Finger f1=1 f2=2 f3=3 f4=4 f5=5
@@ -11,9 +12,11 @@ MIDI.Notes{MIDI.Note}(v::Vector{MIDI.Note}) = MIDI.Notes(v)
 const Pitch = UInt8
 const NoteFingerPair = Pair{Note, Finger}
 const Fingering = SortedDict{Note, Finger}
+
 struct FingeringState
     index::Int
     fingering::Fingering
+    next_notes::Notes
 end
 
 # single finger strength sorted by finger number
@@ -43,10 +46,10 @@ function Base.show(io::IO, fingering::Fingering)
 end
 
 # midi note number of white keys
-white_keys = [21, 23, 24, 26, 28, 29, 31, 33, 35, 36, 38, 40, 41, 43, 45, 47, 48, 50, 52, 53, 55, 57, 59, 60, 62, 
+const white_keys = Int[21, 23, 24, 26, 28, 29, 31, 33, 35, 36, 38, 40, 41, 43, 45, 47, 48, 50, 52, 53, 55, 57, 59, 60, 62, 
     64, 65, 67, 69, 71, 72, 74, 76, 77, 79, 81, 83, 84, 86, 88, 89, 91, 93, 95, 96, 98, 100, 101, 103, 105, 107, 108]
 # midi note number of black keys
-black_keys = [22, 25, 27, 30, 32, 34, 37, 39, 42, 44, 46, 49, 51, 54, 56, 58, 61, 63, 66, 68, 70, 73,75, 78, 80, 
+const black_keys = Int[22, 25, 27, 30, 32, 34, 37, 39, 42, 44, 46, 49, 51, 54, 56, 58, 61, 63, 66, 68, 70, 73,75, 78, 80, 
     82, 85, 87, 90, 92, 94, 97, 99, 102, 104, 106]
 
 # index 1: vector of fingers of N fingering combinations
@@ -242,7 +245,7 @@ function stretch_rate(hand::Hand,nfp1::NoteFingerPair,nfp2::NoteFingerPair)
     max_dis = max_finger_distance[Int(finger1),Int(finger2)]
 
     stratch_rate = finger_dis > nature_dis ? 
-        (finger_dis - nature_dis) / (max_dis - nature_dis) : (nature_dis - finger_dis) / nature_dis
+        (finger_dis - nature_dis) / (max_dis - nature_dis) : -(nature_dis - finger_dis) / nature_dis
 
     return round(stratch_rate; digits=2)
 end
@@ -250,7 +253,7 @@ end
 # get average of all finger stretch rate
 function all_stretch_rate(hand::Hand,fingering::Fingering)
     s = subsets([fingering...],2)
-    return round(mapreduce(x->stretch_rate(hand,x[1],x[2])^1.5,+,s) / length(s), digits=2)
+    return round(mapreduce(x->abs(stretch_rate(hand,x[1],x[2]))^1.5,+,s) / length(s), digits=2)
 end
 
 # Get all available fingering, and hand stretch, no movement

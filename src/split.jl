@@ -74,7 +74,7 @@ end
 function splited_range(notes_by_position::Vector{Notes},hand::Hand)::Vector{UnitRange{Int64}}
     threads_num = Threads.nthreads()
     notes_length = length(notes_by_position)
-    split_length = ceil(notes_length / threads_num)
+    split_length = Int(ceil(notes_length / threads_num))
 
     r = split_notes(notes_by_position,hand)
 

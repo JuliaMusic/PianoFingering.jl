@@ -8,7 +8,7 @@ import POMDPs: Solver, solve, Policy
    exploration_policy::E
    Q_vals::Union{Nothing, Dict{Tuple,Float64}} = nothing
    model_vals::Union{Nothing, Dict{Tuple,Tuple}} = nothing
-   eval_every::Int64 = 200
+   eval_every::Int64 = 300
    n_eval_traj::Int64 = 20
    rng::AbstractRNG = Random.GLOBAL_RNG
    verbose::Bool = true

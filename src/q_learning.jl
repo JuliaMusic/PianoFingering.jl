@@ -32,7 +32,7 @@ Parameters:
    exploration_policy::E
    Q_vals::Union{Nothing, Dict{Tuple,Float64}} = nothing
    #Q_vals::Union{Nothing, Matrix{Float64}} = nothing
-   eval_every::Int64 = 30
+   eval_every::Int64 = 10
    n_eval_traj::Int64 = 20
    rng::AbstractRNG = Random.GLOBAL_RNG
    verbose::Bool = true

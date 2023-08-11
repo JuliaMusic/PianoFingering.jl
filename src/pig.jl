@@ -13,27 +13,27 @@ end
 
 # load pig dataset without fingering
 # return tuple(rh_notes,lh_notes)
-function pig_loader(file_name::String)::Tuple{Vector{Notes},Vector{Notes}}
-    rh_pig_notes,lh_pig_notes = parse_pig("$(file_name)")
+function pig_loader(file_path::String)::Tuple{Vector{Notes},Vector{Notes}}
+    rh_pig_notes,lh_pig_notes = parse_pig(file_path)
     return (pig_to_notes_by_time(rh_pig_notes),pig_to_notes_by_time(lh_pig_notes))
-end
+end 
 
 # read pig file and return left hand / right hand PigNote
-function parse_pig(file_name::String)::Tuple{Vector{PigNote},Vector{PigNote}}
+function parse_pig(file_path::String)::Tuple{Vector{PigNote},Vector{PigNote}}
     rh_pig_notes = PigNote[]
     lh_pig_notes = PigNote[]
-    for pn in pig_to_pignotes(file_name)
+    for pn in pig_to_pignotes(file_path)
         pn.finger_number > 0 ? push!(rh_pig_notes,pn) : push!(lh_pig_notes,pn)
     end
     return rh_pig_notes,lh_pig_notes
 end
 
 # read pig file and convert to Vector of PigNote
-function pig_to_pignotes(file_name::String)::Vector{PigNote}
+function pig_to_pignotes(file_path::String)::Vector{PigNote}
     all_notes = PigNote[]
-    open("pig/$(file_name).txt") do file
+    open(file_path) do file
         for ln in eachline(file)
-            if startswith(ln,"//")
+            if startswith(ln,"//") || length(ln) == 0
                 continue
             end
 
@@ -61,10 +61,8 @@ function pig_to_pignotes(file_name::String)::Vector{PigNote}
 end
 
 # Vector{PigNote} to Vector{Notes}, n in Vector{Notes}
-function pig_to_notes_by_time(pig_notes::Vector{PigNote})::Vector{Notes}
+function pigs_sort_by_time(pig_notes::Vector{PigNote})::Vector{Vector{PigNote}}
     fn = pig_notes[1]
-    # suppose first note is a sixteenth note
-    sixteenth_time = fn.offset_time - fn.onset_time
     
     pigs_by_time = Vector{Vector{PigNote}}()
     temp_time = fn.onset_time
@@ -80,8 +78,6 @@ function pig_to_notes_by_time(pig_notes::Vector{PigNote})::Vector{Notes}
         temp_time = n.onset_time
     end
 
-    duration16th = pig_notes[2].onset_time - pig_notes[1].onset_time
-
     push!(pigs_by_time,copy(temp_vec))
 
     for n in pigs_by_time
@@ -91,7 +87,39 @@ function pig_to_notes_by_time(pig_notes::Vector{PigNote})::Vector{Notes}
     
     # now all pig_notes save in pigs_by_time
     # convert it to Vector{Notes}
-    return map(pigs_by_time) do pns
+    return pigs_by_time
+end
+
+function pig_to_fingering_by_time(pig_notes::Vector{PigNote})::Vector{Fingering}
+    fn = first(pig_notes)
+    # suppose first note is a sixteenth note
+    sixteenth_time = fn.offset_time - fn.onset_time
+    duration16th = pig_notes[2].onset_time - pig_notes[1].onset_time
+
+    map(pigs_sort_by_time(pig_notes)) do pns
+        position = round(Int,256 * pns[1].onset_time / sixteenth_time)
+        fgn = Fingering()
+        for pn in pns
+            nt = Note(
+                name_to_pitch(pn.spelled_pitch), 
+                pn.onset_velocity, 
+                position, 
+                round(Int,256 * duration16th / sixteenth_time), 
+                pn.channel)
+            fg = Finger(abs(pn.finger_number))
+            push!(fgn,nt=>fg)
+        end
+        fgn
+    end
+end
+
+function pig_to_notes_by_time(pig_notes::Vector{PigNote})
+    fn = first(pig_notes)
+    # suppose first note is a sixteenth note
+    sixteenth_time = fn.offset_time - fn.onset_time
+    duration16th = pig_notes[2].onset_time - pig_notes[1].onset_time
+    
+    map(pigs_sort_by_time(pig_notes)) do pns
         position = round(Int,256 * pns[1].onset_time / sixteenth_time)
         notes_vec = map(pns) do pn
             Note(
@@ -111,7 +139,7 @@ pignote_to_string_without_fingering(pn::PigNote)::String =
 function pig_write(file_name::String,rh_fingerings::Vector{Fingering},lh_fingerings::Vector{Fingering})
     open("output/$(file_name)_output.txt","w") do file
         write(file,"//Version:\n")
-        pns = pig_to_pignotes(file_name)
+        pns = pig_to_pignotes("pig/$(file_name).txt")
         rh_pointer = 1
         lh_pointer = 1
 

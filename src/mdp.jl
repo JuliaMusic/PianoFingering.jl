@@ -2,7 +2,7 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
     State = FingeringState
     Action = Fingering
     function R(s::FingeringState, a=missing)
-        sp = State(s.index+1,a)
+        sp = State(s.index+1,a,Notes())
         fingering_s = s.fingering
         fingering_sp = sp.fingering
         num_s = length(fingering_s)
@@ -24,13 +24,21 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
         # 1 note to 1 note
         elseif num_s == 1 && num_sp == 1
             if fingering_sp in get_1to1_fingering(hand,fingering_s,first(notes_sp))
-                if is_1to1_cross(hand,first(fingering_s),first(fingering_sp))             
-                    reward = 30+2.5(4-cross_distance(first(fingering_s),first(fingering_sp)))
+                nfp_s = first(fingering_s)
+                nfp_sp = first(fingering_sp)
+                if is_1to1_cross(hand,nfp_s,nfp_sp)             
+                    reward = 20+2.5(4-cross_distance(nfp_s,nfp_sp))
                 else    
-                    reward = 40+10(1-stretch_rate(hand,first(fingering_s),first(fingering_sp))^2)
+                    sr = stretch_rate(hand,nfp_s,nfp_sp)
+                    if sr == 0 || (ceil(key_distance(nfp_s.first,nfp_sp.first)) == 1 && abs(Int(nfp_s.second)-Int(nfp_sp.second))==1)
+                        return 50
+                    elseif sr > 0
+                        sr = abs(sr)
+                        reward = 40 + 10(1-sr^2)
+                    end
                 end
             else
-                reward = 30-2hand_move_distance(hand,fingering_s,fingering_sp)/3
+                reward = 20-hand_move_distance(hand,fingering_s,fingering_sp)/2
             end
         
         else
@@ -44,7 +52,7 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
             end
             discount = 1
             if !(range_s >= 6 && range_sp >= 6)
-                    discount = 1 - (1.22same_finger_num + 1.22same_note_num + rev_num) / (num_s + num_sp)
+                    discount = 1 - (same_finger_num + same_note_num + rev_num) / (num_s + num_sp)
             end
 
             # 1 to n, n to n 
@@ -63,8 +71,12 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
             # n to 1
             else
                 move_dis = hand_move_distance(hand,fingering_s,fingering_sp)
+                cr = chord_range(fingering_s,fingering_sp)
+                if cr >=7
+                    discount = 1
+                end
                 reward = (50-1.2move_dis) * discount
-                if move_dis >= 7
+                if move_dis >= 20
                     finger_reward *= 500
                 end
             end
@@ -110,13 +122,15 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
 
     return QuickMDP(
         transition = function (s, a)
-            return Deterministic(State(s.index+1,a))
+            next_index = s.index+1
+            next_notes =  length(notes) == next_index ? Notes() : notes[next_index+1]
+            return Deterministic(State(next_index,a,next_notes))
         end,
         statetype = FingeringState,
         actiontype = Fingering,
         actions = A,
         reward = R,
-        initialstate = Deterministic(State(0,Fingering())),
+        initialstate = Deterministic(State(0,Fingering(),notes[1])),
         isterminal = s -> s.index == length(notes)
     )
 end

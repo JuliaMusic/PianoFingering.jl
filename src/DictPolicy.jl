@@ -19,7 +19,7 @@ function action(p::DictPolicy, s)
         end
     end
     if max_action === nothing
-        max_action = available_actions[1]
+        max_action = rand(available_actions)
     end
     return max_action
 end

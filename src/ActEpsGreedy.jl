@@ -14,7 +14,11 @@ function ActEpsGreedyPolicy(problem::Union{MDP,POMDP}, eps::Real;
 end
 function POMDPs.action(p::ActEpsGreedyPolicy, on_policy::Policy, k, s)
     if rand(p.rng) < p.eps(k)
-        return rand(p.rng, actions(p.m,s))
+            try 
+                return rand(p.rng, actions(p.m,s))
+            catch
+                error("$(s) no action")
+            end
     else 
         return action(on_policy, s)
     end
