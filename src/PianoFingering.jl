@@ -29,6 +29,9 @@ export fingering
 export xml_to_pig
 
 const music21 = PyNULL()
+# copy!(music21,pyimport("music21"))
+
+# fingering("example.musicxml")
 
 function __init__()
     copy!(music21,pyimport("music21"))

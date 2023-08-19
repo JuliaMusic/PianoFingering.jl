@@ -1,3 +1,34 @@
+function fingering(file_name::String)
+    file, extension = split(file_name,".")
+    file_name = String(file)
+    extension = String(extension)
+
+    notes_rh,notes_lh = Notes[],Notes[]
+    piano_score = nothing
+    if extension == "musicxml"
+        notes_rh,notes_lh,piano_score = musicxml_loader(file_name)
+    elseif extension == "txt"
+        file_path = "pig/$(file_name).txt"
+        notes_rh,notes_lh = pig_loader(file_path)
+    end
+
+    println("right hand start:")
+    rh_result = run_splite(notes_rh,rh)
+    println("left hand start:")
+    lh_result = run_splite(notes_lh,lh)
+    
+    if extension == "musicxml"
+        # score_with_fingering = music21.converter.parse("musicxml/$(file_name).musicxml")
+        rh_part = piano_score.parts[1]
+        annotation(rh_part,rh_result)
+        lh_part = piano_score.parts[0]
+        annotation(lh_part,lh_result)
+        piano_score.write("musicxml", "output/$(file_name)_output.musicxml")
+    elseif extension == "txt"
+        pig_write(file_name,rh_result,lh_result)
+    end
+end
+
 # multi_thread ------------------
 function run_splite(notes::Vector{Notes},hand::Hand)::Vector{Fingering}
     read_range = splited_range(notes,hand)
@@ -44,7 +75,7 @@ end
 function annotation(part,fgs::Vector{Fingering})
     el_dict = SortedDict()
     # try to pick up all the sounding note and chord
-    for el in part.flat.notes
+    for el in part.flatten().notes
         if el.isChord
             # skip chord symbol
             py_hasattr = pybuiltin("hasattr")
@@ -280,33 +311,3 @@ function cross_chord_checker(dir::String)
     @show c
 end
 
-function fingering(file_name::String)
-    file, extension = split(file_name,".")
-    file_name = String(file)
-    extension = String(extension)
-
-    notes_rh,notes_lh = Notes[],Notes[]
-    piano_score = nothing
-    if extension == "musicxml"
-        notes_rh,notes_lh,piano_score = musicxml_loader(file_name)
-    elseif extension == "txt"
-        file_path = "pig/$(file_name).txt"
-        notes_rh,notes_lh = pig_loader(file_path)
-    end
-
-    println("right hand start:")
-    rh_result = run_splite(notes_rh,rh)
-    println("left hand start:")
-    lh_result = run_splite(notes_lh,lh)
-    
-    if extension == "musicxml"
-        # score_with_fingering = music21.converter.parse("musicxml/$(file_name).musicxml")
-        rh_part = piano_score.parts[1]
-        annotation(rh_part,rh_result)
-        lh_part = piano_score.parts[0]
-        annotation(lh_part,lh_result)
-        piano_score.write("musicxml", "output/$(file_name)_output.musicxml")
-    elseif extension == "txt"
-        pig_write(file_name,rh_result,lh_result)
-    end
-end

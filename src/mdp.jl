@@ -16,7 +16,7 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
         reward = 0
         # initial fingering reward
         # 1 note, 50 reward; more than 1 note, reward by stretch rate
-        if s.index == 0 || notes_s_duration >= 2048
+        if s.index == 0 || notes_s_duration >= 15120
             reward = num_sp == 1 ? 50 : 50(1-all_stretch_rate(hand,fingering_sp))
         # pre fingering is same as next fingering
         elseif fingering_s == fingering_sp
@@ -97,7 +97,7 @@ function piano_mdp(notes::Vector{Notes}, hand::Hand,part::Part)
             # at first notes
             if s.index == 0
                 # first part, or whole part,
-                if part == first_part || part == whole_part || notes_s_duration >= 2048
+                if part == first_part || part == whole_part || notes_s_duration >= 15120
                     return assign_fingering(hand, notes[s.index+1])
                 else
                     return [build_fingering(hand,notes[s.index+1],[f5])]

@@ -25,7 +25,7 @@ Python 3.11.3
 julia version 1.9.0
 ```
 
-Install `music21` (>8.1.0):
+Install `music21` (>9.1.0):
 
 ``` shell
 ❯ pip3 install music21

@@ -16,6 +16,7 @@ function split_notes(notes_by_position::Vector{Notes},hand::Hand)::Vector{Int}
     result = Int[1]
     max_notes = [maximum(notes) for notes in notes_by_position]
     min_notes = [minimum(notes) for notes in notes_by_position]
+
     for i in 2:len-1
         if length(notes_by_position[i]) > 1
             continue
@@ -27,13 +28,18 @@ function split_notes(notes_by_position::Vector{Notes},hand::Hand)::Vector{Int}
         at_right_bound = false
         is_max = true
         over_octave = false
-        while length(s) < 5 
+        while length(s) < 5
             left = i - offset
             right = i + offset
+
             if left >= 1 && right <= len
+                if first(notes_by_position[left+1]).position - first(notes_by_position[left]).position >15120 ||
+                    first(notes_by_position[right]).position - first(notes_by_position[right-1]).position >15120 
+                    break
+                end
                 union!(s, notes_by_position[left])
                 union!(s, notes_by_position[right])
-                if max_notes[i] < max_notes[left] || max_notes[i] < max_notes[right]
+                if max_notes[i].pitch <= max_notes[left].pitch || max_notes[i].pitch <= max_notes[right].pitch
                     is_max = false
                     break
                 end
@@ -64,7 +70,9 @@ function split_notes(notes_by_position::Vector{Notes},hand::Hand)::Vector{Int}
             continue
         end
         if length(s) >= 5 || over_octave
-            push!(result,i)
+            if maximum(s).pitch - minimum(s).pitch >= 8
+                push!(result,i)
+            end
         end            
     end
     push!(result,len)
