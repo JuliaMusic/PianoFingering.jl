@@ -14,7 +14,7 @@ Future Works:
 
 2. Replace the annotation algorithm with a hybrid fingering annotation algorithm that combines data-driven and rule-based methods.
 
-3. Remove the dependency on music21. (Maintain MusicXML.jl)
+3. Remove the music21. (Maintain MusicXML.jl)
 
 ## How to use it
 
