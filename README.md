@@ -10,9 +10,9 @@ THIS PACKAGE ONLY TESTED ON LINUX.
 
 Future Works:
 
-1. Support input of MIDI performances. (This requires training neural networks to segment notes for the left hand and right hand.)
+1. Support input of recorded MIDI. (This requires training neural networks to split notes for the left hand and right hand.)
 
-2. Replace the annotation algorithm with a hybrid fingering annotation algorithm that combines data-driven and rule-based methods.
+2. Replace the annotation algorithm to combine data-driven and rule-based methods.
 
 3. Remove the music21. (Maintain MusicXML.jl)
 
